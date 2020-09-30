@@ -3,9 +3,10 @@ class GifsController < ApplicationController
 
   # GET /gifs
   def index
-    @gifs = Gif.all
+    @category= Gif.where({category: params[:category]})
 
-    render json: @gifs
+
+   render json: @category
   end
 
   # GET /gifs/1

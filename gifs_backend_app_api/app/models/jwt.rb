@@ -1,0 +1,3 @@
+class Jwt < ApplicationRecord
+     
+end

@@ -15,3 +15,2819 @@ Migrating to CreateGifs (20200929164218)
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(8530847513416528965)[0m
   [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/?category=programming" for ::1 at 2020-09-29 12:59:05 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.6ms | Allocations: 409)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 2294)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 12:59:13 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (3.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 15.8ms | ActiveRecord: 5.9ms | Allocations: 1739)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 13:00:24 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"please work", "description"=>"please work", "category"=>"Random", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif", "gif"=>{"name"=>"please work", "category"=>"Random", "description"=>"please work", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[36mGif Create (2.1ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "please work"], ["category", "Random"], ["description", "please work"], ["gif_url", "https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"], ["created_at", "2020-09-29 17:00:24.110485"], ["updated_at", "2020-09-29 17:00:24.110485"]]
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+Completed 201 Created in 21ms (Views: 0.7ms | ActiveRecord: 8.4ms | Allocations: 6462)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 13:00:42 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 992)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 13:01:06 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"please work", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"please work", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["category", "cooking"], ["description", "please work"], ["gif_url", "https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"], ["created_at", "2020-09-29 17:01:06.039892"], ["updated_at", "2020-09-29 17:01:06.039892"]]
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 2585)
+
+
+Started GET "/?category=cooking" for ::1 at 2020-09-29 13:01:09 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"cooking"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 182)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 758)
+
+
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/?category=cooking" for ::1 at 2020-09-29 13:06:27 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"cooking"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 246)
+
+
+Started GET "/?category=cooking" for ::1 at 2020-09-29 13:08:23 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"cooking"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 244)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 13:08:33 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (3.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 3.6ms | Allocations: 1115)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 13:08:51 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"programming", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif", "gif"=>{"name"=>"test", "category"=>"programming", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["category", "programming"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"], ["created_at", "2020-09-29 17:08:51.818688"], ["updated_at", "2020-09-29 17:08:51.818688"]]
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+Completed 201 Created in 11ms (Views: 1.2ms | ActiveRecord: 1.4ms | Allocations: 2583)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 13:08:54 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "gif_url"=>"", "gif"=>{"name"=>"", "category"=>"", "description"=>"", "gif_url"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["category", ""], ["description", ""], ["gif_url", ""], ["created_at", "2020-09-29 17:08:54.093530"], ["updated_at", "2020-09-29 17:08:54.093530"]]
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 1.5ms | ActiveRecord: 1.2ms | Allocations: 2586)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:08:58 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:13:58 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 244)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 13:14:00 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 1365)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:14:21 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:15:10 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 244)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 13:15:16 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.3ms | Allocations: 1365)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:15:21 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 244)
+
+
+Started GET "/?category=diy" for ::1 at 2020-09-29 13:21:39 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"diy"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 399)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:21:41 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=cooking" for ::1 at 2020-09-29 13:21:49 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"cooking"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=cooking" for ::1 at 2020-09-29 13:23:57 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"cooking"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:24:01 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=diy" for ::1 at 2020-09-29 13:24:05 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"diy"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/" for ::1 at 2020-09-29 13:28:41 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 13:30:52 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (5.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 5.1ms | Allocations: 1784)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 13:31:50 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"Arts and crafts", "gif_url"=>"https://giphy.com/gifs/season-10-the-simpsons-10x15-3o6MbhYjXivHHMrLSE/links", "gif"=>{"name"=>"test", "category"=>"Arts and crafts", "description"=>"test", "gif_url"=>"https://giphy.com/gifs/season-10-the-simpsons-10x15-3o6MbhYjXivHHMrLSE/links"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.9ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["category", "Arts and crafts"], ["description", "test"], ["gif_url", "https://giphy.com/gifs/season-10-the-simpsons-10x15-3o6MbhYjXivHHMrLSE/links"], ["created_at", "2020-09-29 17:31:50.672821"], ["updated_at", "2020-09-29 17:31:50.672821"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 14ms (Views: 1.2ms | ActiveRecord: 2.3ms | Allocations: 5921)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 13:32:40 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"description"=>"", "category"=>"programming", "name"=>"", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif", "gif"=>{"name"=>"", "category"=>"programming", "description"=>"", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.5ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["category", "programming"], ["description", ""], ["gif_url", "https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"], ["created_at", "2020-09-29 17:32:40.415257"], ["updated_at", "2020-09-29 17:32:40.415257"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 2585)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:32:56 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:33:04 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/" for ::1 at 2020-09-29 13:36:36 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/api" for ::1 at 2020-09-29 13:36:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:37:28 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.9ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 248)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 13:37:41 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 922)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:37:54 -0400
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 244)
+
+
+Started GET "/?category=programming" for ::1 at 2020-09-29 13:39:16 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"category"=>"programming"}
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 13:39:54 -0400
+Processing by GifsController#index as HTML
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1211)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 13:40:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:40:51 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 13:42:21 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 13:42:25 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 13:42:26 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:42:36 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.7ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:48:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 1139)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:48:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.6ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 13:49:02 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 13:49:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 13:49:05 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 13:49:08 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 13:49:09 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 13:49:11 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:49:12 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:52:08 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:52:14 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:53:51 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 13:54:07 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:54:09 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 13:54:11 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 13:54:14 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 13:54:15 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 13:55:17 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:01:33 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.6ms | Allocations: 1272)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 14:01:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 14:06:14 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=ArtsandCraft" for ::1 at 2020-09-29 14:06:34 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"ArtsandCraft"}
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "ArtsandCraft"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 14:06:38 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 1035)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:14:56 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 960)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:18:26 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 886)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:18:31 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (3.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 3.4ms | Allocations: 886)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:18:33 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 4.9ms | Allocations: 930)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:19:48 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:19:53 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (3.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.2ms | Allocations: 886)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:20:03 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 886)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 14:22:07 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 886)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:22:27 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (8.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 8.6ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:22:30 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:22:31 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 902)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:22:36 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:23:54 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:24:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:24:09 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.9ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:25:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:26:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:26:12 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:26:17 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:26:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 901)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:33:09 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 3.2ms | Allocations: 1004)
+
+
+Started GET "/gifs?category=undefined" for ::1 at 2020-09-29 14:35:29 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"undefined"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "undefined"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/cooking" for ::1 at 2020-09-29 14:36:34 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/cooking" for ::1 at 2020-09-29 14:36:45 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:37:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:40:35 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (1.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:42:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:42:48 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 903)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:42:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (1.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.7ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:44:13 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 902)
+
+
+Started GET "/gifs?category=/artsandcrafts" for ::1 at 2020-09-29 14:44:21 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:44:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:44:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:45:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:47:00 -0400
+Processing by GifsController#index as HTML
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 899)
+
+
+Started GET "/gifs?category=%22/programming%22" for ::1 at 2020-09-29 14:47:14 -0400
+Processing by GifsController#index as HTML
+  Parameters: {"category"=>"\"/programming\""}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "\"/programming\""]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 899)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:47:28 -0400
+Processing by GifsController#index as HTML
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1167)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:49:19 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=/programming" for ::1 at 2020-09-29 14:49:25 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"/programming"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "/programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:50:09 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:55:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:56:18 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:56:29 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:57:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:58:19 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:58:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 14:59:38 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (3.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.0ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:06:05 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.2ms | Allocations: 1271)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:14:17 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 1271)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:14:21 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:14:32 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:14:37 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:14:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.2ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 15:14:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:14:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 15:14:55 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 15:14:58 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 904)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:14:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:15:08 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:20:54 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1036)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:21:02 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:21:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:22:07 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (3.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.3ms | Allocations: 1035)
+
+
+Started DELETE "/gifs/2" for ::1 at 2020-09-29 15:22:09 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.5ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 6.2ms | Allocations: 2568)
+
+
+Started DELETE "/gifs/2" for ::1 at 2020-09-29 15:22:11 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 634)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Gif with 'id'=2):
+  
+app/controllers/gifs_controller.rb:45:in `set_gif'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:22:16 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.8ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:22:22 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:22:25 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1169)
+
+
+Started DELETE "/gifs/6" for ::1 at 2020-09-29 15:22:45 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.6ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 2.1ms | Allocations: 2414)
+
+
+Started DELETE "/gifs/3" for ::1 at 2020-09-29 15:22:49 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.6ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 3.2ms | Allocations: 2414)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:22:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:34:55 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 44ms (Views: 16.4ms | ActiveRecord: 26.6ms | Allocations: 1003)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 15:34:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 15:34:58 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (2.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 15:34:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.8ms | Allocations: 901)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 15:35:09 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 15:36:25 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"coffee is good", "description"=>"coffee", "category"=>"Random", "gif_url"=>"https://media2.giphy.com/media/DDKYtfXxviN5rCZLjC/giphy.webp", "gif"=>{"name"=>"coffee is good", "category"=>"Random", "description"=>"coffee", "gif_url"=>"https://media2.giphy.com/media/DDKYtfXxviN5rCZLjC/giphy.webp"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (1.7ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "coffee is good"], ["category", "Random"], ["description", "coffee"], ["gif_url", "https://media2.giphy.com/media/DDKYtfXxviN5rCZLjC/giphy.webp"], ["created_at", "2020-09-29 19:36:25.341524"], ["updated_at", "2020-09-29 19:36:25.341524"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 9ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 2594)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 15:36:35 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 15:37:03 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"coffee", "description"=>"Coffee 30 rock", "category"=>"cooking", "gif_url"=>"https://media2.giphy.com/media/DDKYtfXxviN5rCZLjC/giphy.webp", "gif"=>{"name"=>"coffee", "category"=>"cooking", "description"=>"Coffee 30 rock", "gif_url"=>"https://media2.giphy.com/media/DDKYtfXxviN5rCZLjC/giphy.webp"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "coffee"], ["category", "cooking"], ["description", "Coffee 30 rock"], ["gif_url", "https://media2.giphy.com/media/DDKYtfXxviN5rCZLjC/giphy.webp"], ["created_at", "2020-09-29 19:37:03.732951"], ["updated_at", "2020-09-29 19:37:03.732951"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 2585)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:37:06 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:43:49 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 1137)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 15:44:18 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.5ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 15:44:32 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"", "description"=>"", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif", "gif"=>{"name"=>"", "category"=>"cooking", "description"=>"", "gif_url"=>"https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.7ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["category", "cooking"], ["description", ""], ["gif_url", "https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif"], ["created_at", "2020-09-29 19:44:32.960370"], ["updated_at", "2020-09-29 19:44:32.960370"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 2583)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:44:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 1169)
+
+
+Started DELETE "/gifs/9" for ::1 at 2020-09-29 15:44:49 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.5ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 1.8ms | Allocations: 2417)
+
+
+Started DELETE "/gifs/8" for ::1 at 2020-09-29 15:44:51 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.5ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 1.9ms | Allocations: 2414)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:45:03 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:49:31 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:50:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 15:56:38 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.1ms | Allocations: 1004)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 15:56:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 18:07:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (6.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 7.0ms | Allocations: 1003)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:07:49 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:08:17 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 901)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 18:08:20 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 886)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 18:15:15 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.6ms | Allocations: 961)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 18:15:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 929)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 18:15:42 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (4.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 4.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 18:15:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:15:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 18:16:04 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (2.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 2.3ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 18:16:07 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"", "description"=>"", "category"=>"", "gif_url"=>"https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif", "gif"=>{"name"=>"", "category"=>"", "description"=>"", "gif_url"=>"https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (10.0ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["category", ""], ["description", ""], ["gif_url", "https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif"], ["created_at", "2020-09-29 22:16:07.800315"], ["updated_at", "2020-09-29 22:16:07.800315"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 20ms (Views: 1.0ms | ActiveRecord: 11.7ms | Allocations: 2583)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 18:16:12 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"description"=>"", "category"=>"cooking", "name"=>"", "gif_url"=>"", "gif"=>{"name"=>"", "category"=>"cooking", "description"=>"", "gif_url"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["category", "cooking"], ["description", ""], ["gif_url", ""], ["created_at", "2020-09-29 22:16:12.231219"], ["updated_at", "2020-09-29 22:16:12.231219"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 6ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 2582)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:16:14 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.5ms | Allocations: 1034)
+
+
+Started DELETE "/gifs/11" for ::1 at 2020-09-29 18:16:17 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mGif Load (2.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (1.6ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 4.5ms | Allocations: 2417)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 18:16:21 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 18:16:34 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["category", "cooking"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/avm3RkgkEJwq1wZwvl/giphy.gif"], ["created_at", "2020-09-29 22:16:34.736005"], ["updated_at", "2020-09-29 22:16:34.736005"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 2583)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:16:37 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1035)
+
+
+Started DELETE "/gifs/12" for ::1 at 2020-09-29 18:16:38 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.3ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 6ms (ActiveRecord: 2.0ms | Allocations: 2414)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 18:20:53 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 18:28:03 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 1.7ms | Allocations: 1003)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 18:28:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:29:38 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.2ms | Allocations: 901)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 18:29:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 901)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 18:29:43 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 18:30:22 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"title", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif", "gif"=>{"name"=>"title", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (2.3ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "title"], ["category", "cooking"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/3o6MbhYjXivHHMrLSE/giphy.gif"], ["created_at", "2020-09-29 22:30:22.968607"], ["updated_at", "2020-09-29 22:30:22.968607"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 8ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 2583)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:30:24 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started DELETE "/gifs/13" for ::1 at 2020-09-29 18:30:32 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.6ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 1.6ms | Allocations: 2417)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:52:54 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (13.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 7.8ms | ActiveRecord: 13.9ms | Allocations: 1003)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:52:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 18:53:01 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 18:53:31 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 18:53:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:53:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 18:53:42 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 18:53:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:53:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 18:53:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 18:53:54 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 18:53:56 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 18:53:58 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 18:54:05 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 18:54:10 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.0ms | Allocations: 901)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 18:54:26 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 19:46:21 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.1ms | Allocations: 1004)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 19:46:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 903)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 19:46:46 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/gifs?category=diy" for ::1 at 2020-09-29 19:46:48 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (4.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.1ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 19:46:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 19:46:53 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 19:46:54 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 19:46:56 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 19:56:58 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "gif"=>{}}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms | Allocations: 132)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:19:in `create'
+Started POST "/gifs" for ::1 at 2020-09-29 20:01:48 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "gif"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 129)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:19:in `create'
+Started POST "/gifs" for ::1 at 2020-09-29 20:02:28 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "gif"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 129)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:19:in `create'
+Started POST "/gifs" for ::1 at 2020-09-29 20:03:59 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "gif"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 129)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:19:in `create'
+Started POST "/gifs" for ::1 at 2020-09-29 20:05:03 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "gif"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 129)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:19:in `create'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8530847513416528965)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsernames (20200930000819)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.5ms)[0m  [1m[35mCREATE TABLE "usernames" ("id" bigserial primary key, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200930000819"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8530847513416528965)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8530847513416528965)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsernames (20200930000819)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mDROP TABLE "usernames"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200930000819"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(8530847513416528965)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8530847513416528965)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200930001341)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200930001341"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8530847513416528965)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2020-09-29 20:16:43 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "user"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test"], ["password", "test"], ["created_at", "2020-09-30 00:16:43.585623"], ["updated_at", "2020-09-30 00:16:43.585623"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 0.6ms | ActiveRecord: 10.3ms | Allocations: 5064)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:45:54 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:47:27 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:47:30 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:49:28 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:49:28 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:49:35 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:51:10 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:51:38 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8530847513416528965)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJwts (20200930002832)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "jwts" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200930002832"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8530847513416528965)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 20:52:39 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 3.7ms | Allocations: 2078)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 20:52:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.9ms | Allocations: 919)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-09-29 20:52:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 919)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-09-29 20:52:45 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 919)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:52:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 919)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 20:52:50 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 886)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 20:57:18 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.3ms | Allocations: 887)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:57:18 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 20:58:36 -0400
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:58:36 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (2.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.5ms | Allocations: 1115)
+
+
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 1003)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 20:59:24 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/RJKHjCAdsAfQPn03qQ/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/RJKHjCAdsAfQPn03qQ/giphy.gif"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (1.5ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["category", "cooking"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/RJKHjCAdsAfQPn03qQ/giphy.gif"], ["created_at", "2020-09-30 00:59:24.233557"], ["updated_at", "2020-09-30 00:59:24.233557"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 24ms (Views: 0.9ms | ActiveRecord: 9.3ms | Allocations: 6457)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:59:27 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 1047)
+
+
+Started DELETE "/gifs/14" for ::1 at 2020-09-29 20:59:28 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[36mGif Destroy (0.7ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:39:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 2.3ms | Allocations: 2560)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:59:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (8.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 8.1ms | Allocations: 902)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 20:59:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.1ms | Allocations: 901)
+
+
+Started GET "/gifs" for ::1 at 2020-09-29 21:00:10 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 886)
+
+
+Started POST "/gifs" for ::1 at 2020-09-29 21:00:22 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/RJKHjCAdsAfQPn03qQ/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/RJKHjCAdsAfQPn03qQ/giphy.gif"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[36mGif Create (0.5ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test"], ["category", "cooking"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/RJKHjCAdsAfQPn03qQ/giphy.gif"], ["created_at", "2020-09-30 01:00:22.276246"], ["updated_at", "2020-09-30 01:00:22.276246"]]
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:21:in `create'
+Completed 201 Created in 9ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 2585)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:00:26 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 1.2ms | Allocations: 1035)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:00:27 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"id"=>"15", "gif"=>{}}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.3ms | Allocations: 686)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:30:in `update'
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:00:30 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"id"=>"15", "gif"=>{}}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.4ms | Allocations: 711)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: gif):
+  
+app/controllers/gifs_controller.rb:50:in `gif_params'
+app/controllers/gifs_controller.rb:30:in `update'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:07:24 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.0ms | Allocations: 1156)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:07:24 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 1037)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:14:06 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.5ms | Allocations: 1138)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:14:06 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:21:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.1ms | Allocations: 1137)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:22:53 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:23:25 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:23:35 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:24:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:25:05 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (7.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 7.7ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:25:10 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:25:58 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:27:16 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:27:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:27:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:30:07 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (5.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.7ms | ActiveRecord: 5.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:31:16 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:33:24 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:34:26 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:37:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (4.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 4.1ms | Allocations: 1035)
+
+
+Started PATCH "/gifs" for ::1 at 2020-09-29 21:38:16 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/gifs"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:44:11 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 1136)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:50:35 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.3ms | Allocations: 1137)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:50:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.3ms | Allocations: 1035)
+
+
+Started PATCH "/gifs" for ::1 at 2020-09-29 21:51:09 -0400
+  
+ActionController::RoutingError (No route matches [PATCH] "/gifs"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:53:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.4ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:53:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:53:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:53:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (4.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 4.6ms | Allocations: 1035)
+
+
+Started PATCH "/gifs/[object%20Object]" for ::1 at 2020-09-29 21:54:15 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"name"=>"work god damnit", "description"=>"work you peice of shit", "category"=>"", "id"=>"[object Object]", "gif"=>{"id"=>"[object Object]", "name"=>"work god damnit", "category"=>"", "description"=>"work you peice of shit"}}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 647)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Gif with 'id'=[object Object]):
+  
+app/controllers/gifs_controller.rb:45:in `set_gif'
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:55:19 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (4.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 4.7ms | Allocations: 1035)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:55:19 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1035)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:41 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"name"=>"fucking work", "description"=>"fuck you code", "category"=>"", "id"=>"15", "gif"=>{"id"=>"15", "name"=>"fucking work", "category"=>"", "description"=>"fuck you code"}}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:30:in `update'
+  [1m[36mGif Update (2.1ms)[0m  [1m[33mUPDATE "gifs" SET "name" = $1, "category" = $2, "description" = $3, "updated_at" = $4 WHERE "gifs"."id" = $5[0m  [["name", "fucking work"], ["category", ""], ["description", "fuck you code"], ["updated_at", "2020-09-30 01:55:41.839136"], ["id", 15]]
+  ↳ app/controllers/gifs_controller.rb:30:in `update'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:30:in `update'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 3205)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:44 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:30:in `update'
+  [1m[36mGif Update (0.5ms)[0m  [1m[33mUPDATE "gifs" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "gifs"."id" = $4[0m  [["name", ""], ["description", ""], ["updated_at", "2020-09-30 01:55:44.174204"], ["id", 15]]
+  ↳ app/controllers/gifs_controller.rb:30:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:30:in `update'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3122)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:45 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 974)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:45 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 978)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:46 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 978)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:46 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 976)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:46 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 976)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:46 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 976)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:47 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 976)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:47 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 976)
+
+
+Started PATCH "/gifs/15" for ::1 at 2020-09-29 21:55:47 -0400
+Processing by GifsController#update as HTML
+  Parameters: {"description"=>"", "category"=>"", "name"=>"", "id"=>"15", "gif"=>{"name"=>"", "category"=>"", "description"=>""}}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:45:in `set_gif'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 976)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:56:09 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 903)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-09-29 21:57:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 21:58:56 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (2.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.3ms | Allocations: 901)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-09-29 23:15:13 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.3ms | Allocations: 901)
+
+
