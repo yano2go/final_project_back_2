@@ -1,5 +1,6 @@
 class GifsController < ApplicationController
   before_action :set_gif, only: [:show, :update, :destroy]
+  before_action :authorized, only:  [:create, :update,:destroy]
 
   # GET /gifs
   def index
