@@ -17,7 +17,7 @@ class GifsController < ApplicationController
 
   # POST /gifs
   def create
-    @gif = Gif.new(gif_params)
+    @gif = Gif.new (gif_params.merge({user_id: @user.id}))
 
     if @gif.save
       render json: @gif, status: :created, location: @gif
