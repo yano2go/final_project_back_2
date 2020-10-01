@@ -6,12 +6,12 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
+Use rails credentials:edit to set the AWS secrets (as ENV["VARIABLE_NAME"])
 amazon:
   service: S3
-  access_key_id: <%= Rails.application.credentials.dig(:aws, :ENV['secret_access_key']) %>
-  secret_access_key: <%= Rails.application.credentials.dig(:aws, :ENV['secret_access_key']) %>
-  region: us-east-1
+  access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+  secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+  region: us-east-2
   bucket: learningingifs
 
 # Remember not to checkin your GCS keyfile to a repository
