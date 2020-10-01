@@ -48,6 +48,6 @@ class GifsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def gif_params
-      params.require(:gif).permit(:name, :category, :description, :gif_url)
+      params.require(:gif).permit(:name, :category, :description, :gif_url, :gif_file)
     end
 end
