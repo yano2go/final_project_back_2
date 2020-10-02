@@ -6,8 +6,11 @@ class GifsController < ApplicationController
   def index
     @category= Gif.where({category: params[:category]})
 
-
-   render json: @category
+   @gif = Gif.all()
+   if params[:category] == nil 
+      render json: @gif 
+    else render json: @category
+    end
   end
 
   # GET /gifs/1
