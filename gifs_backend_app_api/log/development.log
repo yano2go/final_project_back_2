@@ -5393,3 +5393,1052 @@ Processing by GifsController#index as */*
 Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1042)
 
 
+  [1m[36mGif Load (2.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Create (0.8ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "yank"], ["created_at", "2020-10-01 23:41:51.529055"], ["updated_at", "2020-10-01 23:41:51.529055"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (3.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "j60fjiesln3uc3fm2tek3yukwyab"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-01 23:43:48.895606"]]
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 27], ["blob_id", 6], ["created_at", "2020-10-01 23:43:48.899068"]]
+  [1m[36mGif Update (0.6ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-01 23:43:48.900898"], ["id", 27]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (222.0ms) [0m[32mUploaded file to key: j60fjiesln3uc3fm2tek3yukwyab (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Create (0.6ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "alyan"], ["created_at", "2020-10-01 23:58:26.520246"], ["updated_at", "2020-10-01 23:58:26.520246"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "g91bm4czfv6zd4x87if4vestjaj3"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-01 23:58:45.289831"]]
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 28], ["blob_id", 7], ["created_at", "2020-10-01 23:58:45.294081"]]
+  [1m[36mGif Update (0.4ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-01 23:58:45.296486"], ["id", 28]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (216.3ms) [0m[32mUploaded file to key: g91bm4czfv6zd4x87if4vestjaj3 (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Create (0.8ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "please work"], ["created_at", "2020-10-02 00:29:28.417406"], ["updated_at", "2020-10-02 00:29:28.417406"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "plzwork"], ["created_at", "2020-10-02 00:31:39.489296"], ["updated_at", "2020-10-02 00:31:39.489296"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 30], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 30], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "v7t0hz2cggn80a7n7inm16wxhmjm"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-02 00:33:48.407951"]]
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 30], ["blob_id", 8], ["created_at", "2020-10-02 00:33:48.409809"]]
+  [1m[36mGif Update (1.1ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 00:33:48.411490"], ["id", 30]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (211.6ms) [0m[32mUploaded file to key: v7t0hz2cggn80a7n7inm16wxhmjm (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Create (0.5ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Wonderful"], ["created_at", "2020-10-02 00:47:01.594934"], ["updated_at", "2020-10-02 00:47:01.594934"]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "wyrsplcl6gqcfvp0qybm3gmuys11"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-02 00:47:40.539308"]]
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 31], ["blob_id", 9], ["created_at", "2020-10-02 00:47:40.540936"]]
+  [1m[36mGif Update (0.6ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 00:47:40.551548"], ["id", 31]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (1886.0ms) [0m[32mUploaded file to key: wyrsplcl6gqcfvp0qybm3gmuys11 (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0cbc240d-d73e-45f8-b7ba-5380c6a628e5) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9ba7f991c0 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/9>>
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0cbc240d-d73e-45f8-b7ba-5380c6a628e5] Performing ActiveStorage::AnalyzeJob (Job ID: 0cbc240d-d73e-45f8-b7ba-5380c6a628e5) from Async(active_storage_analysis) enqueued at 2020-10-02T00:47:42Z with arguments: #<GlobalID:0x00007f9ba7cf0888 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0cbc240d-d73e-45f8-b7ba-5380c6a628e5] [36m  S3 Storage (187.4ms) [0m[34mDownloaded file from key: wyrsplcl6gqcfvp0qybm3gmuys11[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0cbc240d-d73e-45f8-b7ba-5380c6a628e5] Error performing ActiveStorage::AnalyzeJob (Job ID: 0cbc240d-d73e-45f8-b7ba-5380c6a628e5) from Async(active_storage_analysis) in 196.1ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGif Create (0.9ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "testing"], ["created_at", "2020-10-02 01:01:20.780889"], ["updated_at", "2020-10-02 01:01:20.780889"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "zui705tctmybgng5x56viugn0dor"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-02 01:01:40.901619"]]
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 32], ["blob_id", 10], ["created_at", "2020-10-02 01:01:40.903009"]]
+  [1m[36mGif Update (0.7ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 01:01:40.909621"], ["id", 32]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (3844.4ms) [0m[32mUploaded file to key: zui705tctmybgng5x56viugn0dor (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1df33882-2688-45d0-84e2-98c589b36ad7) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9ba7edbe90 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/10>>
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1df33882-2688-45d0-84e2-98c589b36ad7] Performing ActiveStorage::AnalyzeJob (Job ID: 1df33882-2688-45d0-84e2-98c589b36ad7) from Async(active_storage_analysis) enqueued at 2020-10-02T01:01:44Z with arguments: #<GlobalID:0x00007f9ba7e5ac78 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/10>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1df33882-2688-45d0-84e2-98c589b36ad7] [36m  S3 Storage (48.2ms) [0m[34mDownloaded file from key: zui705tctmybgng5x56viugn0dor[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1df33882-2688-45d0-84e2-98c589b36ad7] Error performing ActiveStorage::AnalyzeJob (Job ID: 1df33882-2688-45d0-84e2-98c589b36ad7) from Async(active_storage_analysis) in 49.22ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "gifs"[0m
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (2.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Destroy (1.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 10]]
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "jzqnlan2vkec844iggxj7ltjevsj"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-02 01:57:12.996603"]]
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 32], ["blob_id", 11], ["created_at", "2020-10-02 01:57:12.999009"]]
+  [1m[36mGif Update (0.6ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 01:57:13.000830"], ["id", 32]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (4171.1ms) [0m[32mUploaded file to key: jzqnlan2vkec844iggxj7ltjevsj (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 77ea03e1-a2ea-4f18-9b73-6efd19ff63da) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007f9151e689c8 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/10>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c09b8c15-76da-4f75-805f-fd80aba3f01c) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9156261a58 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/11>>
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c09b8c15-76da-4f75-805f-fd80aba3f01c] Performing ActiveStorage::AnalyzeJob (Job ID: c09b8c15-76da-4f75-805f-fd80aba3f01c) from Async(active_storage_analysis) enqueued at 2020-10-02T01:57:17Z with arguments: #<GlobalID:0x00007f914f55be18 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/11>>
+  [1m[36mActiveStorage::Blob Load (6.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da] Performing ActiveStorage::PurgeJob (Job ID: 77ea03e1-a2ea-4f18-9b73-6efd19ff63da) from Async(active_storage_purge) enqueued at 2020-10-02T01:57:17Z with arguments: #<GlobalID:0x00007f914c213bc8 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/10>>
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da]   [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 10], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da]   [1m[36mActiveStorage::Attachment Load (15.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da]   [1m[36mActiveStorage::Blob Destroy (1.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 10]]
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c09b8c15-76da-4f75-805f-fd80aba3f01c] [36m  S3 Storage (191.0ms) [0m[34mDownloaded file from key: jzqnlan2vkec844iggxj7ltjevsj[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c09b8c15-76da-4f75-805f-fd80aba3f01c] Error performing ActiveStorage::AnalyzeJob (Job ID: c09b8c15-76da-4f75-805f-fd80aba3f01c) from Async(active_storage_analysis) in 199.19ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da] [36m  S3 Storage (219.0ms) [0m[31mDeleted file from key: zui705tctmybgng5x56viugn0dor[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da] [36m  S3 Storage (57.1ms) [0m[31mDeleted files by key prefix: variants/zui705tctmybgng5x56viugn0dor/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [77ea03e1-a2ea-4f18-9b73-6efd19ff63da] Performed ActiveStorage::PurgeJob (Job ID: 77ea03e1-a2ea-4f18-9b73-6efd19ff63da) from Async(active_storage_purge) in 311.22ms
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (2.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Destroy (0.7ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 11]]
+  [1m[36mActiveStorage::Blob Create (1.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "uatiupex9bav4i4j06ktcv4mqyj2"], ["filename", "test.gif"], ["content_type", "image/webp"], ["metadata", "{\"identified\":true}"], ["byte_size", 710190], ["checksum", "F0Nn8mcZiVdpY6IiXMUcbw=="], ["created_at", "2020-10-02 02:05:29.926262"]]
+  [1m[36mActiveStorage::Attachment Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 32], ["blob_id", 12], ["created_at", "2020-10-02 02:05:29.929516"]]
+  [1m[36mGif Update (0.7ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 02:05:29.931766"], ["id", 32]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (4370.2ms) [0m[32mUploaded file to key: uatiupex9bav4i4j06ktcv4mqyj2 (checksum: F0Nn8mcZiVdpY6IiXMUcbw==)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 0d2c8702-dcc2-404b-8158-b96f500e65d0) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007f9150495be0 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/11>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b1e23ee5-7cf0-44f4-99f3-58a4f21013f5) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f914c760270 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/12>>
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0] Performing ActiveStorage::PurgeJob (Job ID: 0d2c8702-dcc2-404b-8158-b96f500e65d0) from Async(active_storage_purge) enqueued at 2020-10-02T02:05:34Z with arguments: #<GlobalID:0x00007f9151dabd00 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b1e23ee5-7cf0-44f4-99f3-58a4f21013f5] Performing ActiveStorage::AnalyzeJob (Job ID: b1e23ee5-7cf0-44f4-99f3-58a4f21013f5) from Async(active_storage_analysis) enqueued at 2020-10-02T02:05:34Z with arguments: #<GlobalID:0x00007f9151da3ad8 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0]   [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0]   [1m[36mActiveStorage::Blob Destroy (1.0ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 11]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0]   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b1e23ee5-7cf0-44f4-99f3-58a4f21013f5] [36m  S3 Storage (45.5ms) [0m[34mDownloaded file from key: uatiupex9bav4i4j06ktcv4mqyj2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b1e23ee5-7cf0-44f4-99f3-58a4f21013f5] Error performing ActiveStorage::AnalyzeJob (Job ID: b1e23ee5-7cf0-44f4-99f3-58a4f21013f5) from Async(active_storage_analysis) in 46.54ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0] [36m  S3 Storage (200.1ms) [0m[31mDeleted file from key: jzqnlan2vkec844iggxj7ltjevsj[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0] [36m  S3 Storage (47.8ms) [0m[31mDeleted files by key prefix: variants/jzqnlan2vkec844iggxj7ltjevsj/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0d2c8702-dcc2-404b-8158-b96f500e65d0] Performed ActiveStorage::PurgeJob (Job ID: 0d2c8702-dcc2-404b-8158-b96f500e65d0) from Async(active_storage_purge) in 258.34ms
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Destroy (1.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 12]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "35aqa20atkzshn0ejj9vnt4x24zj"], ["filename", "magic.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 78203], ["checksum", "+VyQV4XuAWkRAqxLfOMFyw=="], ["created_at", "2020-10-02 02:09:58.792002"]]
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 32], ["blob_id", 13], ["created_at", "2020-10-02 02:09:58.793803"]]
+  [1m[36mGif Update (0.6ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 02:09:58.795518"], ["id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (1038.1ms) [0m[32mUploaded file to key: 35aqa20atkzshn0ejj9vnt4x24zj (checksum: +VyQV4XuAWkRAqxLfOMFyw==)[0m
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 79034fe2-8471-4230-92f6-f0d235b5df80) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007f9151d1a008 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/12>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 31902128-a18b-4250-a930-b50499bc4881) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9151d0a0e0 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/13>>
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [31902128-a18b-4250-a930-b50499bc4881] Performing ActiveStorage::AnalyzeJob (Job ID: 31902128-a18b-4250-a930-b50499bc4881) from Async(active_storage_analysis) enqueued at 2020-10-02T02:09:59Z with arguments: #<GlobalID:0x00007f9151ce37b0 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/13>>
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80] Performing ActiveStorage::PurgeJob (Job ID: 79034fe2-8471-4230-92f6-f0d235b5df80) from Async(active_storage_purge) enqueued at 2020-10-02T02:09:59Z with arguments: #<GlobalID:0x00007f9151cdac28 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80]   [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80]   [1m[36mActiveStorage::Attachment Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 12], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80]   [1m[36mActiveStorage::Blob Destroy (1.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 12]]
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80]   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [31902128-a18b-4250-a930-b50499bc4881] [36m  S3 Storage (45.3ms) [0m[34mDownloaded file from key: 35aqa20atkzshn0ejj9vnt4x24zj[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [31902128-a18b-4250-a930-b50499bc4881] Error performing ActiveStorage::AnalyzeJob (Job ID: 31902128-a18b-4250-a930-b50499bc4881) from Async(active_storage_analysis) in 46.93ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80] [36m  S3 Storage (195.7ms) [0m[31mDeleted file from key: uatiupex9bav4i4j06ktcv4mqyj2[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80] [36m  S3 Storage (58.1ms) [0m[31mDeleted files by key prefix: variants/uatiupex9bav4i4j06ktcv4mqyj2/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [79034fe2-8471-4230-92f6-f0d235b5df80] Performed ActiveStorage::PurgeJob (Job ID: 79034fe2-8471-4230-92f6-f0d235b5df80) from Async(active_storage_purge) in 264.39ms
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 13]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "jysbzknhx4og40lbw3p1w8vzcdgw"], ["filename", "magic.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 78203], ["checksum", "+VyQV4XuAWkRAqxLfOMFyw=="], ["created_at", "2020-10-02 02:19:02.834827"]]
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 32], ["blob_id", 14], ["created_at", "2020-10-02 02:19:02.836819"]]
+  [1m[36mGif Update (0.5ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 02:19:02.838261"], ["id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (950.9ms) [0m[32mUploaded file to key: jysbzknhx4og40lbw3p1w8vzcdgw (checksum: +VyQV4XuAWkRAqxLfOMFyw==)[0m
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 4d3debb0-b95f-4e72-a949-57b0ae7e0a01) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007f91505a3e38 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/13>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: eba17214-81b9-4517-87ce-873ecb01fb45) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f9156272f38 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/14>>
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01] Performing ActiveStorage::PurgeJob (Job ID: 4d3debb0-b95f-4e72-a949-57b0ae7e0a01) from Async(active_storage_purge) enqueued at 2020-10-02T02:19:03Z with arguments: #<GlobalID:0x00007f91561fa5b0 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/13>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eba17214-81b9-4517-87ce-873ecb01fb45] Performing ActiveStorage::AnalyzeJob (Job ID: eba17214-81b9-4517-87ce-873ecb01fb45) from Async(active_storage_analysis) enqueued at 2020-10-02T02:19:03Z with arguments: #<GlobalID:0x00007f91561f8e68 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/14>>
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01]   [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01]   [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 13], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01]   [1m[36mActiveStorage::Blob Destroy (1.0ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 13]]
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01]   [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eba17214-81b9-4517-87ce-873ecb01fb45] [36m  S3 Storage (48.7ms) [0m[34mDownloaded file from key: jysbzknhx4og40lbw3p1w8vzcdgw[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eba17214-81b9-4517-87ce-873ecb01fb45] Error performing ActiveStorage::AnalyzeJob (Job ID: eba17214-81b9-4517-87ce-873ecb01fb45) from Async(active_storage_analysis) in 50.19ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01] [36m  S3 Storage (224.5ms) [0m[31mDeleted file from key: 35aqa20atkzshn0ejj9vnt4x24zj[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01] [36m  S3 Storage (59.9ms) [0m[31mDeleted files by key prefix: variants/35aqa20atkzshn0ejj9vnt4x24zj/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [4d3debb0-b95f-4e72-a949-57b0ae7e0a01] Performed ActiveStorage::PurgeJob (Job ID: 4d3debb0-b95f-4e72-a949-57b0ae7e0a01) from Async(active_storage_purge) in 294.01ms
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" ORDER BY "gifs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 14]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "7qodvl1id5p1ervjvoae18pdzt0g"], ["filename", "magic.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 78203], ["checksum", "+VyQV4XuAWkRAqxLfOMFyw=="], ["created_at", "2020-10-02 02:21:04.311267"]]
+  [1m[36mActiveStorage::Attachment Create (1.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gif_file"], ["record_type", "Gif"], ["record_id", 32], ["blob_id", 15], ["created_at", "2020-10-02 02:21:04.313152"]]
+  [1m[36mGif Update (0.5ms)[0m  [1m[33mUPDATE "gifs" SET "updated_at" = $1 WHERE "gifs"."id" = $2[0m  [["updated_at", "2020-10-02 02:21:04.315025"], ["id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (999.7ms) [0m[32mUploaded file to key: 7qodvl1id5p1ervjvoae18pdzt0g (checksum: +VyQV4XuAWkRAqxLfOMFyw==)[0m
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 68796fde-f3c1-4474-be15-bd056c7fec33) to Async(active_storage_purge) with arguments: #<GlobalID:0x00007f914f540758 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/14>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ca34ce06-f770-492d-92a7-07f71318e499) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f914f5320b8 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/15>>
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33] Performing ActiveStorage::PurgeJob (Job ID: 68796fde-f3c1-4474-be15-bd056c7fec33) from Async(active_storage_purge) enqueued at 2020-10-02T02:21:05Z with arguments: #<GlobalID:0x00007f914f51b868 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/14>>
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca34ce06-f770-492d-92a7-07f71318e499] Performing ActiveStorage::AnalyzeJob (Job ID: ca34ce06-f770-492d-92a7-07f71318e499) from Async(active_storage_analysis) enqueued at 2020-10-02T02:21:05Z with arguments: #<GlobalID:0x00007f914f5104b8 @uri=#<URI::GID gid://gifs-backend-app-api/ActiveStorage::Blob/15>>
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33]   [1m[36mActiveStorage::Attachment Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 14], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33]   [1m[36mActiveStorage::Blob Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 14]]
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33]   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca34ce06-f770-492d-92a7-07f71318e499] [36m  S3 Storage (42.1ms) [0m[34mDownloaded file from key: 7qodvl1id5p1ervjvoae18pdzt0g[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ca34ce06-f770-492d-92a7-07f71318e499] Error performing ActiveStorage::AnalyzeJob (Job ID: ca34ce06-f770-492d-92a7-07f71318e499) from Async(active_storage_analysis) in 43.59ms: Aws::S3::Errors::Forbidden ():
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:365:in `rescue in exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/aws-sdk-s3-1.81.1/lib/aws-sdk-s3/object.rb:360:in `exists?'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:109:in `stream'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:30:in `block in download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:126:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service/s3_service.rb:29:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:32:in `download'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:13:in `block in open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:24:in `open_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/downloader.rb:12:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/service.rb:86:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob.rb:219:in `open'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer.rb:27:in `download_blob_to_tempfile'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:32:in `read_image'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activestorage-6.0.3.3/app/jobs/active_storage/analyze_job.rb:11:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:40:in `block in perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/i18n-1.8.5/lib/i18n.rb:313:in `with_locale'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `block in instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/notifications.rb:180:in `instrument'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `block in tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/tagged_logging.rb:80:in `tagged'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:45:in `tag_logger'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:39:in `perform_now'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:25:in `block in execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:43:in `block (4 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:72:in `block in wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/reloader.rb:71:in `wrap'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/railtie.rb:42:in `block (3 levels) in <class:Railtie>'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `instance_exec'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activesupport-6.0.3.3/lib/active_support/callbacks.rb:139:in `run_callbacks'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/execution.rb:23:in `execute'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activejob-6.0.3.3/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/concurrent-ruby-1.1.7/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33] [36m  S3 Storage (201.2ms) [0m[31mDeleted file from key: jysbzknhx4og40lbw3p1w8vzcdgw[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33] [36m  S3 Storage (53.3ms) [0m[31mDeleted files by key prefix: variants/jysbzknhx4og40lbw3p1w8vzcdgw/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [68796fde-f3c1-4474-be15-bd056c7fec33] Performed ActiveStorage::PurgeJob (Job ID: 68796fde-f3c1-4474-be15-bd056c7fec33) from Async(active_storage_purge) in 266.26ms
+Started GET "//gifs" for ::1 at 2020-10-01 22:23:44 -0400
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 23ms (Views: 9.2ms | ActiveRecord: 7.0ms | Allocations: 8007)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:27:07 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 1766)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:32:27 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1765)
+
+
+Started POST "//gifs" for ::1 at 2020-10-01 22:33:42 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"best test ever", "description"=>"testing", "category"=>"cooking", "gif_url"=>"", "gif_file"=>{}, "gif"=>{"name"=>"best test ever", "category"=>"cooking", "description"=>"testing", "gif_url"=>""}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:35:43 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 1747)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:41:06 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.3ms | Allocations: 1854)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:42:22 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 1747)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:43:41 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 1765)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:44:56 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 1747)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:45:06 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1747)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:46:15 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 1747)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 22:51:35 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.5ms | Allocations: 1748)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 23:01:10 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 1843)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 23:09:24 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.2ms | Allocations: 1842)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 23:35:15 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.1ms | Allocations: 1842)
+
+
+Started POST "//gifs" for ::1 at 2020-10-01 23:37:29 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"wonderful", "description"=>"testing it now", "category"=>"cooking", "gif_url"=>"https://learningingifs.s3.us-east-2.amazonaws.com/wyrsplcl6gqcfvp0qybm3gmuys11", "gif"=>{"name"=>"wonderful", "category"=>"cooking", "description"=>"testing it now", "gif_url"=>"https://learningingifs.s3.us-east-2.amazonaws.com/wyrsplcl6gqcfvp0qybm3gmuys11"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:37:35 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.8ms | Allocations: 1078)
+
+
+Started GET "//gifs?category=diy" for ::1 at 2020-10-01 23:38:13 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.0ms | Allocations: 907)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:38:16 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Started DELETE "//gifs/23" for ::1 at 2020-10-01 23:38:55 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:46:in `set_gif'
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 823)
+
+
+Started GET "//gifs" for ::1 at 2020-10-01 23:42:37 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1747)
+
+
+Started POST "//gifs" for ::1 at 2020-10-01 23:43:23 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:43:29 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1043)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:43:40 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1042)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:47:00 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1042)
+
+
+Started GET "/gifs" for ::1 at 2020-10-01 23:47:07 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.9ms | Allocations: 1747)
+
+
+Started POST "//gifs" for ::1 at 2020-10-01 23:47:19 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "/gifs" for ::1 at 2020-10-01 23:47:35 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1747)
+
+
+Started GET "/gifs" for ::1 at 2020-10-01 23:47:42 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 1747)
+
+
+Started POST "/gifs" for ::1 at 2020-10-01 23:47:54 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif"}}
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:47:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Started GET "/" for ::1 at 2020-10-01 23:55:39 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 297)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 1535)
+
+
+Started POST "//login" for ::1 at 2020-10-01 23:55:51 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 271ms (Views: 0.5ms | ActiveRecord: 15.6ms | Allocations: 3545)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:56:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1068)
+
+
+Started GET "/gifs" for ::1 at 2020-10-01 23:56:07 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 1747)
+
+
+Started POST "/gifs" for ::1 at 2020-10-01 23:56:50 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/gif.rb:6:in `acceptable_gif'
+  [1m[36mGif Create (2.9ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", "cooking"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/VJiuD191lcicGNsuko/giphy.gif"], ["created_at", "2020-10-02 03:56:51.022174"], ["updated_at", "2020-10-02 03:56:51.022174"], ["user_id", 12]]
+  ↳ app/controllers/gifs_controller.rb:22:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:22:in `create'
+Completed 201 Created in 34ms (Views: 0.7ms | ActiveRecord: 8.3ms | Allocations: 6838)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:56:56 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1183)
+
+
+Started DELETE "//gifs/33" for ::1 at 2020-10-01 23:57:01 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"33"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:46:in `set_gif'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 33], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+  [1m[36mGif Destroy (0.4ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 33]]
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+Completed 204 No Content in 16ms (ActiveRecord: 4.9ms | Allocations: 5519)
+
+
+Started DELETE "//gifs/23" for ::1 at 2020-10-01 23:57:05 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:46:in `set_gif'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+  [1m[36mGif Destroy (0.4ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:40:in `destroy'
+Completed 204 No Content in 13ms (ActiveRecord: 3.1ms | Allocations: 4639)
+
+
+Started GET "//gifs?category=cooking" for ::1 at 2020-10-01 23:58:00 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.0ms | Allocations: 907)
+
+
+Started GET "//gifs?category=diy" for ::1 at 2020-10-01 23:58:01 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"diy"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "diy"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 907)
+
+
+Started GET "//gifs?category=artsandcrafts" for ::1 at 2020-10-01 23:58:02 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 908)
+
+
+Started GET "//gifs?category=programming" for ::1 at 2020-10-01 23:58:03 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 907)
+
+
+Started GET "//gifs?category=random" for ::1 at 2020-10-01 23:58:08 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:10:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 907)
+
+
