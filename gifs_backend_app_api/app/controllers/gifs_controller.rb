@@ -1,15 +1,17 @@
 class GifsController < ApplicationController
   before_action :set_gif, only: [:show, :update, :destroy]
-  before_action :authorized, only:  [:create, :update,:destroy]
+  before_action :authorized, only:  [:create, :update, :destroy]
 
   # GET /gifs
   def index
     @category= Gif.where({category: params[:category]})
+    puts @category
 
    @gif = Gif.all()
-   if params[:category] == nil 
+   if !params[:category]  
       render json: @gif 
-    else render json: @category
+    else 
+      render json: @category
     end
   end
 
