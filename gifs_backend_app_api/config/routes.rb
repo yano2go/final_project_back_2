@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   post '/login', to: 'users#login'
   get '/auto_login', to: 'users#auto_login'
   resources :gifs
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # For details on the DSL available w ithin this file, see https://guides.rubyonrails.org/routing.html
 end
