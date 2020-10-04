@@ -7987,3 +7987,948 @@ Processing by GifsController#index as HTML
 Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.7ms | Allocations: 3861)
 
 
+Started GET "/" for ::1 at 2020-10-03 13:35:36 -0400
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 297)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 1540)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 13:37:48 -0400
+Processing by GifsController#index as HTML
+  [1m[36mGif Load (1.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 38ms (Views: 16.4ms | ActiveRecord: 13.6ms | Allocations: 9890)
+
+
+Started POST "/login" for ::1 at 2020-10-03 14:22:39 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 276ms (Views: 0.4ms | ActiveRecord: 13.8ms | Allocations: 3782)
+
+
+Started POST "/login" for ::1 at 2020-10-03 14:31:33 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 262ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 972)
+
+
+Started POST "/login" for ::1 at 2020-10-03 14:53:54 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 263ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 962)
+
+
+Started POST "/users" for ::1 at 2020-10-03 14:58:30 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"fakeuser1", "password"=>"[FILTERED]", "user"=>{"username"=>"fakeuser1"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (6.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "fakeuser1"], ["password_digest", "$2a$12$9K2iyQS3ytZscChOlbVqU.H3rUJNOOt/9s5Y9hRGz8wsoCpWTgb62"], ["created_at", "2020-10-03 18:58:30.503363"], ["updated_at", "2020-10-03 18:58:30.503363"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 273ms (Views: 0.2ms | ActiveRecord: 9.9ms | Allocations: 2903)
+
+
+Started POST "/login" for ::1 at 2020-10-03 14:59:31 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 273ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 859)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 14:59:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 947)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:01:06 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:05:35 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 922)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:07:34 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:08:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (2.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 2.1ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:08:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 938)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:08:46 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:08:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (2.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 2.8ms | Allocations: 920)
+
+
+Started POST "/users" for ::1 at 2020-10-03 15:09:22 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>""}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2157)
+
+
+Started POST "/users" for ::1 at 2020-10-03 15:09:25 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>""}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 964)
+
+
+Started POST "/users" for ::1 at 2020-10-03 15:09:46 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>""}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 966)
+
+
+Started POST "/users" for ::1 at 2020-10-03 15:11:45 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>""}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 964)
+
+
+Started POST "/users" for ::1 at 2020-10-03 15:11:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>""}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 964)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:12:49 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.8ms | Allocations: 922)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:16:32 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (6.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 6.8ms | Allocations: 921)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:16:41 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (5.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 5.1ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:18:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:20:58 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.1ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:23:11 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:24:33 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 15:25:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/" for ::1 at 2020-10-03 15:34:59 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexyanovich/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.9ms | Allocations: 183)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 718)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 15:55:53 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.4ms | Allocations: 3959)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 15:56:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.1ms | Allocations: 949)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 16:07:51 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 1.5ms | Allocations: 3958)
+
+
+Started POST "/login" for ::1 at 2020-10-03 16:07:53 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 262ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 890)
+
+
+Started POST "/users" for ::1 at 2020-10-03 16:09:01 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"nopublicpassword", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"nopublicpassword"}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "nopublicpassword"], ["password_digest", "$2a$12$FYbSVtO6JLEhpfXJNuGPbOPWCKfRI6KRMb7JDf5cOqZa9i/S03rrK"], ["created_at", "2020-10-03 20:09:01.307572"], ["updated_at", "2020-10-03 20:09:01.307572"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2694)
+
+
+Started POST "/users" for ::1 at 2020-10-03 16:09:02 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "user"=>{"username"=>""}}
+[31mUnpermitted parameter: :user[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 961)
+
+
+Started POST "/users" for ::1 at 2020-10-03 16:10:38 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"nopublicpassword", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"nopublicpassword"}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "nopublicpassword"], ["password_digest", "$2a$12$.p2kl5kv2pMszymbcEEJy.i/kW1waatIpiovw72rvxA3shbt8vZCW"], ["created_at", "2020-10-03 20:10:38.271078"], ["updated_at", "2020-10-03 20:10:38.271078"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 266ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 2699)
+
+
+Started POST "/login" for ::1 at 2020-10-03 17:06:50 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 262ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 960)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 17:07:01 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.3ms | Allocations: 3886)
+
+
+Started POST "/gifs" for ::1 at 2020-10-03 17:07:35 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"programming", "gif_url"=>"https://media.giphy.com/media/THxg89M4W4ajMYMkKF/giphy.gif", "gif"=>{"name"=>"test", "category"=>"programming", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/THxg89M4W4ajMYMkKF/giphy.gif"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/gif.rb:6:in `acceptable_gif'
+  [1m[36mGif Create (0.7ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", "programming"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/THxg89M4W4ajMYMkKF/giphy.gif"], ["created_at", "2020-10-03 21:07:35.483967"], ["updated_at", "2020-10-03 21:07:35.483967"], ["user_id", 12]]
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+Completed 201 Created in 29ms (Views: 0.6ms | ActiveRecord: 7.0ms | Allocations: 6689)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 17:07:37 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1064)
+
+
+Started DELETE "/gifs/52" for ::1 at 2020-10-03 17:07:40 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"52"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:49:in `set_gif'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (6.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 52], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[36mGif Destroy (3.2ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 52]]
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+Completed 204 No Content in 34ms (ActiveRecord: 18.6ms | Allocations: 5688)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 17:08:26 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.1ms | Allocations: 3863)
+
+
+Started POST "/gifs" for ::1 at 2020-10-03 17:08:42 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"programming", "gif_url"=>"https://media.giphy.com/media/THxg89M4W4ajMYMkKF/giphy.gif", "gif"=>{"name"=>"test", "category"=>"programming", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/THxg89M4W4ajMYMkKF/giphy.gif"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+  [1m[36mGif Create (0.4ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", "programming"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/THxg89M4W4ajMYMkKF/giphy.gif"], ["created_at", "2020-10-03 21:08:42.505968"], ["updated_at", "2020-10-03 21:08:42.505968"], ["user_id", 12]]
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 3497)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 17:09:04 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1061)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 17:09:35 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1062)
+
+
+Started DELETE "/gifs/53" for ::1 at 2020-10-03 17:09:39 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"53"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:49:in `set_gif'
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 699)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 17:09:44 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1061)
+
+
+Started POST "/users" for ::1 at 2020-10-03 17:10:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"testuser", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"testuser"}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "testuser"], ["password_digest", "$2a$12$q/PHhe2wsq7BMv3Xjp5ZPe7FV8okjEnuoOORpbNlMBs2cVec5ALae"], ["created_at", "2020-10-03 21:10:52.650702"], ["updated_at", "2020-10-03 21:10:52.650702"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 268ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 2694)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 17:10:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 1061)
+
+
+Started DELETE "/gifs/53" for ::1 at 2020-10-03 17:11:02 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"53"}
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:49:in `set_gif'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 53], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[36mGif Destroy (0.5ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 53]]
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+Completed 204 No Content in 14ms (ActiveRecord: 3.4ms | Allocations: 4642)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 17:11:07 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started POST "/users" for ::1 at 2020-10-03 19:32:38 -0400
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"mark_zuckerberg", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"mark_zuckerberg"}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (6.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "mark_zuckerberg"], ["password_digest", "$2a$12$jfQUrn6fAl4WcDd5Tim0L.1ibuDGajm2oAagIXInrTeIPEqgYq/HW"], ["created_at", "2020-10-03 23:32:38.744430"], ["updated_at", "2020-10-03 23:32:38.744430"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 285ms (Views: 0.4ms | ActiveRecord: 21.8ms | Allocations: 5631)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 19:32:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (3.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 22ms (Views: 6.0ms | ActiveRecord: 9.0ms | Allocations: 2734)
+
+
+Started POST "/login" for ::1 at 2020-10-03 19:33:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 268ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1030)
+
+
+Started POST "/users" for ::1 at 2020-10-03 19:35:12 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+[31mUnpermitted parameters: :isLoggedIn, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "yano2go"], ["password_digest", "$2a$12$hrKBO8ci.FsI2y9SgURMkOD2XuiLDcT1tuhigHJrg/410ru47e80q"], ["created_at", "2020-10-03 23:35:12.553880"], ["updated_at", "2020-10-03 23:35:12.553880"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 265ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 2713)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 19:35:52 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 19:35:55 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 20:06:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.3ms | Allocations: 1056)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 20:07:11 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 922)
+
+
+Started POST "/login" for ::1 at 2020-10-03 20:07:33 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 269ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 867)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:07:45 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 923)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:10:20 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:10:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:11:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:13:21 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:14:50 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:15:02 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:16:58 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:17:20 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:18:11 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:19:22 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:19:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:19:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (4.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 4.8ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:20:02 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:21:19 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:22:13 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:25:38 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:25:45 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 921)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:27:22 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:30:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 921)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 20:31:59 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.8ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 920)
+
+
+Started POST "/login" for ::1 at 2020-10-03 20:37:45 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 260ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-10-03 20:38:03 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 260ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 20:38:12 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (1.1ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 26ms (Views: 15.6ms | ActiveRecord: 9.8ms | Allocations: 7850)
+
+
+Started POST "/gifs" for ::1 at 2020-10-03 20:39:14 -0400
+Processing by GifsController#create as HTML
+  Parameters: {"name"=>"test", "description"=>"test", "category"=>"cooking", "gif_url"=>"https://media.giphy.com/media/LOQdBAe5bQyryKI6R4/giphy.gif", "gif"=>{"name"=>"test", "category"=>"cooking", "description"=>"test", "gif_url"=>"https://media.giphy.com/media/LOQdBAe5bQyryKI6R4/giphy.gif"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/gif.rb:6:in `acceptable_gif'
+  [1m[36mGif Create (1.5ms)[0m  [1m[32mINSERT INTO "gifs" ("name", "category", "description", "gif_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", "cooking"], ["description", "test"], ["gif_url", "https://media.giphy.com/media/LOQdBAe5bQyryKI6R4/giphy.gif"], ["created_at", "2020-10-04 00:39:14.496210"], ["updated_at", "2020-10-04 00:39:14.496210"], ["user_id", 12]]
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:25:in `create'
+Completed 201 Created in 32ms (Views: 1.4ms | ActiveRecord: 5.6ms | Allocations: 6696)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 20:39:18 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1065)
+
+
+Started DELETE "/gifs/54" for ::1 at 2020-10-03 20:39:22 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"54"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:49:in `set_gif'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 54], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[36mGif Destroy (2.2ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:43:in `destroy'
+Completed 204 No Content in 25ms (ActiveRecord: 12.5ms | Allocations: 5688)
+
+
+Started POST "/login" for ::1 at 2020-10-03 20:40:02 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 261ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 20:40:11 -0400
+Processing by GifsController#index as HTML
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 3861)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:01:11 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 265ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 962)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 21:01:17 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (1.2ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.2ms | Allocations: 946)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-03 21:01:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:02:35 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 260ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 861)
+
+
+Started GET "/gifs" for ::1 at 2020-10-03 21:02:40 -0400
+Processing by GifsController#index as */*
+  [1m[36mGif Load (0.7ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:11:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 3864)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:04:02 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 261ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 860)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 21:04:07 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.5ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:04:23 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 259ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/gifs?category=random" for ::1 at 2020-10-03 21:04:25 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"random"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "random"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:04:34 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 260ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:05:14 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "isLoggedIn"=>false, "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 260ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 860)
+
+
+Started GET "/gifs?category=cooking" for ::1 at 2020-10-03 21:05:19 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"cooking"}
+  [1m[36mGif Load (0.6ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "cooking"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:05:57 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:08:39 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:09:17 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 920)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:09:29 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (9.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 9.3ms | Allocations: 922)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:11:16 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 921)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:11:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 921)
+
+
+Started POST "/login" for ::1 at 2020-10-03 21:11:34 -0400
+Processing by UsersController#login as HTML
+  Parameters: {"username"=>"yano2go", "password"=>"[FILTERED]", "user"=>{"username"=>"yano2go"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "yano2go"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `login'
+Completed 200 OK in 260ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 859)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:11:47 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (1.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.3ms | Allocations: 921)
+
+
+Started GET "/gifs?category=artsandcrafts" for ::1 at 2020-10-03 21:15:43 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"artsandcrafts"}
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "artsandcrafts"]]
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 920)
+
+

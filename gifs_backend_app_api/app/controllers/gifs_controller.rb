@@ -31,16 +31,23 @@ class GifsController < ApplicationController
 
   # PATCH/PUT /gifs/1
   def update
+    if @user.id == @gif.user_id
     if @gif.update(gif_params)
       render json: @gif
     else
       render json: @gif.errors, status: :unprocessable_entity
     end
+    
+    end
   end
 
   # DELETE /gifs/1
   def destroy
+    
+    
+    if @user.id == @gif.user_id
     @gif.destroy
+    end
   end
 
   private
