@@ -12701,3 +12701,74 @@ Processing by GifsController#index as */*
 Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1188)
 
 
+Started GET "/gifs" for ::1 at 2020-10-04 15:15:05 -0400
+Processing by GifsController#index as HTML
+  [1m[36mGif Load (1.0ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" IS NULL[0m
+  ↳ app/controllers/gifs_controller.rb:8:in `puts'
+  [1m[36mGif Load (0.9ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs"[0m
+  ↳ app/controllers/gifs_controller.rb:12:in `index'
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 1.9ms | Allocations: 4113)
+
+
+Started DELETE "/gifs/90" for ::1 at 2020-10-04 15:15:11 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"90"}
+  [1m[36mGif Load (0.3ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:58:in `set_gif'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 90], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[36mGif Destroy (0.4ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 90]]
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 3.1ms | Allocations: 4669)
+
+
+Started DELETE "/gifs/89" for ::1 at 2020-10-04 15:15:12 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"89"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:58:in `set_gif'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 89], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[36mGif Destroy (0.3ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 89]]
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 2.4ms | Allocations: 4641)
+
+
+Started DELETE "/gifs/91" for ::1 at 2020-10-04 15:15:17 -0400
+Processing by GifsController#destroy as */*
+  Parameters: {"id"=>"91"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:58:in `set_gif'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 91], ["record_type", "Gif"], ["name", "gif_file"], ["LIMIT", 1]]
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[36mGif Destroy (0.8ms)[0m  [1m[31mDELETE FROM "gifs" WHERE "gifs"."id" = $1[0m  [["id", 91]]
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gifs_controller.rb:51:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 2.7ms | Allocations: 4641)
+
+
+Started GET "/gifs?category=programming" for ::1 at 2020-10-04 15:15:23 -0400
+Processing by GifsController#index as */*
+  Parameters: {"category"=>"programming"}
+  [1m[36mGif Load (0.4ms)[0m  [1m[34mSELECT "gifs".* FROM "gifs" WHERE "gifs"."category" = $1[0m  [["category", "programming"]]
+  ↳ app/controllers/gifs_controller.rb:8:in `puts'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 758)
+
+
